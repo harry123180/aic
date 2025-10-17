@@ -18,3 +18,9 @@ rosdep install --from-paths src --ignore-src --rosdistro jazzy
 source /opt/ros/jazzy/setup.bash
 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --symlink-install
 ```
+
+### Launch
+
+```bash
+ros2 launch ieec_bringup ieec_gz_bringup.launch.py 
+```
