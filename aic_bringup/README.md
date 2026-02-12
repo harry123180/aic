@@ -20,7 +20,7 @@
 ```bash
 source ~/ws_aic/install/setup.bash
 export RMW_IMPLEMENTATION=rmw_zenoh_cpp
-export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true'
+export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true;transport/shared_memory/transport_optimization/pool_size=536870912'
 
 ros2 launch aic_bringup aic_gz_bringup.launch.py
 ```
@@ -276,11 +276,6 @@ ros2 launch aic_bringup aic_gz_bringup.launch.py spawn_task_board:=true spawn_ca
 ros2 launch aic_bringup spawn_task_board.launch.py \
   lc_mount_rail_0_present:=true \
   lc_mount_rail_0_translation:=0.05
-```
-
-### Open Gripper
-```bash
-ros2 launch aic_bringup gripper_action.launch.py use_position:=true position:=0.8
 ```
 
 ---
